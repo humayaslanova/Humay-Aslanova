@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qeydiyyat Səhifəsi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 450px;
+      margin: 30px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    nav {
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .radio-group {
+      margin-top: 5px;
+    }
+    .radio-group label {
+      display: inline;
+      font-weight: normal;
+      margin-right: 15px;
+    }
+    button {
+      width: 100%;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Səhifə Menyusu -->
+  <nav>
+    <a href="index.html">Ana Səhifə</a>
+    <a href="haqqimda.html">Haqqımda</a>
+    <a href="xidmetler.html">Xidmətlər</a>
+  </nav>
+
+  <h2>İstifadəçi Qeydiyyatı</h2>
+
+  <form action="https://formspree.io/f/SİZİN_FORMSPREE_ID" method="POST">
+    
+    <div class="form-group">
+      <label for="fullname">Ad və Soyad:</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Məsələn: Əli Əliyev" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">E-poçt Ünvanı:</label>
+      <input type="email" id="email" name="email" placeholder="nümunə@mail.com" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Şifrə (Parol):</label>
+      <input type="password" id="password" name="password" placeholder="Şifrənizi daxil edin" required>
+    </div>
+
+    <div class="form-group">
+      <label for="age">Yaş:</label>
+      <input type="number" id="age" name="age" min="18" max="100" placeholder="Yaşınız">
+    </div>
+
+    <div class="form-group">
+      <label>Cinsiyyət:</label>
+      <div class="radio-group">
+        <input type="radio" id="qadin" name="cinsiyyet" value="Qadın">
+        <label for="qadin">Qadın</label>
+        
+        <input type="radio" id="kisi" name="cinsiyyet" value="Kişi">
+        <label for="kisi">Kişi</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="dob">Doğum Tarixi:</label>
+      <input type="date" id="dob" name="dob">
+    </div>
+
+    <button type="submit">Qeydiyyatdan Keç</button>
+
+  </form>
+
+</body>
+</html>
